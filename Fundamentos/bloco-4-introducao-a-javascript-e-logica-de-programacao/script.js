@@ -1,6 +1,7 @@
 //Exercicio 1
 const a = 45, b = 45, c = 90;
 let peca = "toRRe";
+let nota = "100"; 
 
 function adicao(a,b) {
   return a+b;
@@ -108,3 +109,29 @@ function xadrez(peca) {
 }
 
 console.log(xadrez(peca));
+
+//Exercicio 7
+function converteNota(nota) {
+  let resp = '';
+
+  if((nota < 0) || (nota > 100)) {
+    resp = "Valor de nota invalido"
+  }else if(nota >= 90) {
+    resp = 'A'
+  }else if(nota >= 80) {
+    resp = 'B'
+  }else if(nota >= 70) {
+    resp = 'C'
+  }else if(nota >= 60) {
+    resp = 'D'
+  }else if(nota >= 50) {
+    resp = 'E'
+  }else{
+    resp = 'F'
+  }
+  return resp;
+}
+
+console.log(converteNota(nota));
+
+//Exercicio 8
