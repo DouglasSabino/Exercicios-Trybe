@@ -1,5 +1,5 @@
 //Exercicio 1
-const a = 45, b = 45, c = 91;
+const a = 44, b = 44, c = 91;
 let peca = "toRRe";
 let nota = "100"; 
 
@@ -145,3 +145,15 @@ function verificaSeEPar(a,b,c) {
 }
 
 console.log(verificaSeEPar(a,b,c));
+
+//Exercicio 9
+function verificaSeEImpar(a,b,c) {
+  
+    if((a%2 != 0) || (b%2 != 0) || (c%2 != 0)) {
+      return true;
+    }
+
+    return false;
+}
+
+console.log(verificaSeEImpar(a,b,c));
