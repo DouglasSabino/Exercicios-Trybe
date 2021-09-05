@@ -1,5 +1,5 @@
 //Exercicio 1
-const a = 45, b = 45, c = 90;
+const a = 45, b = 45, c = 91;
 let peca = "toRRe";
 let nota = "100"; 
 
@@ -115,19 +115,19 @@ function converteNota(nota) {
   let resp = '';
 
   if((nota < 0) || (nota > 100)) {
-    resp = "Valor de nota invalido"
+    resp = "Valor de nota invalido";
   }else if(nota >= 90) {
-    resp = 'A'
+    resp = 'A';
   }else if(nota >= 80) {
-    resp = 'B'
+    resp = 'B';
   }else if(nota >= 70) {
-    resp = 'C'
+    resp = 'C';
   }else if(nota >= 60) {
-    resp = 'D'
+    resp = 'D';
   }else if(nota >= 50) {
-    resp = 'E'
+    resp = 'E';
   }else{
-    resp = 'F'
+    resp = 'F';
   }
   return resp;
 }
@@ -135,3 +135,13 @@ function converteNota(nota) {
 console.log(converteNota(nota));
 
 //Exercicio 8
+function verificaSeEPar(a,b,c) {
+  
+    if((a%2 === 0) || (b%2 === 0) || (c%2 === 0)) {
+      return true;
+    }
+
+    return false;
+}
+
+console.log(verificaSeEPar(a,b,c));
