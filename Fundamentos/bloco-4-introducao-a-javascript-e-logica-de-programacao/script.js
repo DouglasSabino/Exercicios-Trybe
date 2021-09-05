@@ -1,5 +1,6 @@
 //Exercicio 1
 const a = 45, b = 45, c = 90;
+let peca = "toRRe";
 
 function adicao(a,b) {
   return a+b;
@@ -77,3 +78,33 @@ function verificaTriangulo(a,b,c) {
 
 console.log(verificaTriangulo(a,b,c));
 
+//Exercicio 6
+function xadrez(peca) {
+  let pecaLow = peca.toLowerCase();
+  let resp = '';
+  switch(pecaLow) {
+
+    case 'torre':
+        resp = "Horizontel e Vertical";
+      break;
+    case 'cavalo':
+        resp = "Anda em 'L'";
+      break;
+    case 'bispo':
+        resp = "Anda em Diagonal";
+      break;
+    case 'rei':
+        resp = "Anda para todas as direções uma casa por vez";
+      break;
+    case 'rainha':
+        resp = "Anda para todas as direções";            
+      break;
+    default:
+        resp = "Peça invalida";
+
+
+  }
+  return resp;
+}
+
+console.log(xadrez(peca));
