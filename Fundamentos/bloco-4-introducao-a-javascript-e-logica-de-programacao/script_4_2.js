@@ -1,5 +1,5 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-
+/*
 //Exercicio 1
 for(let num of numbers) {
     console.log(num);
@@ -109,12 +109,21 @@ for(let i = 1; i < numbers.length; i++) {
 }
 
 console.log(numbers);
+*/
 
 //Bonus 3
 let arrayMultiplicado = [];
 
 for(let i = 0; i < numbers.length; i++){
-    arrayMultiplicado.push(numbers[i]*numbers[i+1]);
+    let multiplica = 0;
+    if(!numbers[i+1]) {
+        multiplica = numbers[i]*2;
+        arrayMultiplicado.push(multiplica);
+    }else {
+        multiplica = (numbers[i]*numbers[i+1]);
+        arrayMultiplicado.push(multiplica);
+    }
+     
 }
 
 console.log(arrayMultiplicado);
