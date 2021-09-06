@@ -157,3 +157,21 @@ function verificaSeEImpar(a,b,c) {
 }
 
 console.log(verificaSeEImpar(a,b,c));
+
+//Exercicio 10
+const custo = 10, valorVenda = 17;
+let valorCustoTotal = custo + (custo * 20) / 100;
+let lucro = 0;
+
+function calculaLucro(valorCustoTotal, valorVenda) {
+  if((valorCustoTotal <= 0) || (valorVenda <=0)){
+    return "Valores incorretos"
+  }
+
+  lucro = (valorVenda - valorCustoTotal) * 1000;
+
+  return lucro;
+
+}
+
+console.log(calculaLucro(valorCustoTotal, valorVenda));
