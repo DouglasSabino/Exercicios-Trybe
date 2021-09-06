@@ -78,7 +78,43 @@ for(let i = 0; i < 25; i++) {
 console.log(novoVetor);
 
 //Exercicio 9
-
 for(let num of novoVetor) {
   console.log(num/2);
 }
+
+//Bonus 1
+let aux;
+for(let i = 1; i < numbers.length; i++) {
+  for(let x = 0; x < numbers.length; x++) {
+    if(numbers[i] < numbers[x]){
+      aux = numbers[i];
+      numbers[i] = numbers[x];
+      numbers[x] = aux;
+    }
+  }
+}
+
+console.log(numbers);
+
+//Bonus 2
+aux = 0;
+for(let i = 1; i < numbers.length; i++) {
+  for(let x = 0; x < numbers.length; x++) {
+    if(numbers[i] > numbers[x]){
+      aux = numbers[i];
+      numbers[i] = numbers[x];
+      numbers[x] = aux;
+    }
+  }
+}
+
+console.log(numbers);
+
+//Bonus 3
+let arrayMultiplicado = [];
+
+for(let i = 0; i < numbers.length; i++){
+    arrayMultiplicado.push(numbers[i]*numbers[i+1]);
+}
+
+console.log(arrayMultiplicado);
