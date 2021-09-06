@@ -22,3 +22,63 @@ let media = soma / numbers.length
 console.log(media);
 
 //Exercicio 4
+soma = 0;
+for(let num of numbers) {
+    soma = soma + num;
+}
+
+media = soma / numbers.length
+if(media > 20) {
+  console.log("valor maior que 20");
+}else {
+  console.log("valor menor ou igual a 20");  
+}
+
+//Exercicio 5
+let maior = 0;
+for(let num of numbers) {
+    if(num > maior){
+      maior = num;
+    }
+}
+
+console.log(maior);
+
+//Exercicio 6
+let contaImpar = 0;
+for(let num of numbers) {
+    if(num%2 != 0){
+      contaImpar++;
+    }
+}
+
+if(contaImpar === 0) {
+    console.log("nenhum valor impar");
+}else{
+    console.log("Existem " + contaImpar + " numeros impares no array");
+}
+
+//Exercicio 7
+let menor = numbers[0];
+for(let num of numbers) {
+    if(num < menor){
+      menor = num;
+    }
+}
+
+console.log(menor);
+
+//Exercicio 8
+let novoVetor = [];
+
+for(let i = 0; i < 25; i++) {
+    novoVetor[i] = i+1;
+}
+
+console.log(novoVetor);
+
+//Exercicio 9
+
+for(let num of novoVetor) {
+  console.log(num/2);
+}
