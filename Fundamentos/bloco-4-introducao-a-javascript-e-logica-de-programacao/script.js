@@ -175,3 +175,48 @@ function calculaLucro(valorCustoTotal, valorVenda) {
 }
 
 console.log(calculaLucro(valorCustoTotal, valorVenda));
+
+//Exercicio 11
+let salarioBruto = 3000;
+
+function calculaInss(salarioBruto) {
+let aliquota = 0;
+
+if(salarioBruto <= 1556.94) {
+  aliquota = (salarioBruto*8) / 100;
+}else if(salarioBruto <= 2594.92) {
+  aliquota = (salarioBruto*9) / 100;
+}else if(salarioBruto <= 5189.82) {
+  aliquota = (salarioBruto*11) / 100;  
+}else {
+  aliquota = 570.88
+} 
+
+  let salarioDeduzidoInss = salarioBruto - aliquota;
+  return salarioDeduzidoInss;
+}
+
+let salarioBase = calculaInss(salarioBruto) 
+
+function calculaImpostaDeRenda(salarioBase) {
+
+let aliquota = 0;
+let IR = 0;
+
+if(salarioBase <= 1903.98) {
+ IR = 0;
+}else if(salarioBase <= 2826.65){
+ IR = ((salarioBase*7.5)/100) - 142.80;
+}else if(salarioBase <= 3751.05) {
+ IR = ((salarioBase*15)/100) - 354,80;
+}else if(salarioBase <= 4664.68) {
+ IR = ((salarioBase*22.5)/100) - 636.13;
+}else{
+  IR = ((salarioBase*27.5)/100) - 869.36;
+}
+
+ let salarioDeduzidoIR = salarioBase - IR;
+ return salarioDeduzidoIR;
+}
+
+console.log(calculaImpostaDeRenda(salarioBase));
