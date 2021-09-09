@@ -92,3 +92,11 @@ function somaAteN(n) {
 }
 
 console.log(somaAteN(n));
+
+//Exercicio 7 - Parte II
+let word = 'trybe', ending = 'be'
+function verificaFinalPalavra(word,ending) {
+  return word.endsWith('be');
+}
+
+console.log(verificaFinalPalavra(word,ending));
