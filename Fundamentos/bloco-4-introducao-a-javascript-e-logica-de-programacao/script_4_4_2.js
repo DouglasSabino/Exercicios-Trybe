@@ -74,3 +74,21 @@ function maisRepetido(vetorTeste) {
 }
 
 console.log(maisRepetido(vetorTeste));
+
+//Exercicio 6 - Parte II
+let n = 5;
+let soma = 0
+function somaAteN(n) {
+  let vetor = [];
+  while(n > 0) {
+   vetor.push(n);
+   n--;
+  }
+
+  for(let num of vetor) {
+    soma += num;
+  }
+  return "A soma do vetor é: " + soma;
+}
+
+console.log(somaAteN(n));
