@@ -39,3 +39,17 @@ function retornaIndiceDoMenor(vetor) {
 }
 
 console.log(retornaIndiceDoMenor(vetor));
+
+//Exercicio 4 - Parte II
+let vetorNomes = ['Douglas','Diego','Ana','Fabianooo','Maria'];
+let maiorNome = 'a';
+function verificaMaiorNome(vetorNomes) {
+  for(let nome of vetorNomes) {
+    if(nome.length > maiorNome.length) {
+      maiorNome = nome
+    }
+  }
+  return "O maior nome do veotor é: " + maiorNome;
+}
+
+console.log(verificaMaiorNome(vetorNomes));
