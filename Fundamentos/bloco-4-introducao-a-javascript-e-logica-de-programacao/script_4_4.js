@@ -10,24 +10,24 @@ let info = {
     nota: 'O último MacPatinhas',
   };  
 
-  //Exercicio 1
+  //Exercicio 1 - Parte I
   console.log("Bem-vinda, " + info.personagem);
 
-  //Exercicio 2
+  //Exercicio 2 - Parte I
   info['recorrente'] = 'sim';
   console.log(info);
 
-  //Exercicio 3
+  //Exercicio 3 - Parte I
   for(let atribute in info){
       console.log(atribute);
   }
 
-  //Exercicio 4
+  //Exercicio 4 - Parte I
   for(let atribute in info){
     console.log(info[atribute]);
 }
 
-  //Exercicio 5
+  //Exercicio 5 - Parte I
   newInfo['recorrente'] = 'sim';
   for(let atribute in info,newInfo){
     if(info[atribute] == newInfo[atribute]) {
@@ -36,3 +36,4 @@ let info = {
       }  
     console.log(info[atribute] + ' e ' + newInfo[atribute]);
 }
+
