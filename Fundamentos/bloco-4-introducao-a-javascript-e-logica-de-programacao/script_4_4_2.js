@@ -49,7 +49,28 @@ function verificaMaiorNome(vetorNomes) {
       maiorNome = nome
     }
   }
-  return "O maior nome do veotor é: " + maiorNome;
+  return "O maior nome do vetor é: " + maiorNome;
 }
 
 console.log(verificaMaiorNome(vetorNomes));
+
+//Exercicio 5 - Parte II
+let vetorTeste = [2, 3, 2, 5, 8, 2, 3];
+let vetorTransisao = [];
+let vetorRepetido = [];
+function maisRepetido(vetorTeste) {
+  for(let i = 0; i < vetorTeste.length; i++) {
+    for(let x = 0; x < vetorTeste.length; x++) {
+      if(vetorTeste[i] == vetorTeste[x]) {
+       vetorTransisao.push(vetorTeste[i]);
+      }
+    }
+    if(vetorTransisao.length > vetorRepetido.length) {
+      vetorRepetido = vetorTransisao;
+    }
+    vetorTransisao = [];
+  }
+  return "O Numero mais rapetido é: " + vetorRepetido[0];
+}
+
+console.log(maisRepetido(vetorTeste));
