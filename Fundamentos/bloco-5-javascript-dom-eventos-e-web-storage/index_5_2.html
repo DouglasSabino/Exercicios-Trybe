@@ -79,6 +79,62 @@
         let right_content = document.createElement('section')
         right_content.className = 'right-content'
         main.appendChild(right_content)
+        let img = document.createElement('img')
+        img.setAttribute('src','https://picsum.photos/200')
+        img.className = 'small-image'
+        let imgLeft = document.getElementsByClassName('left-content')[0]
+        imgLeft.appendChild(img)
+        let criaUl = document.createElement('ul')
+        let um = document.createElement('li')
+        let dois = document.createElement('li')
+        let tres = document.createElement('li')
+        let quatro = document.createElement('li')
+        let cinto = document.createElement('li')
+        let seis = document.createElement('li')
+        let sete = document.createElement('li')
+        let oito = document.createElement('li')
+        let nove = document.createElement('li')
+        let dez = document.createElement('li')
+        um.innerText = 'um'
+        dois.innerText = 'dois'
+        tres.innerText = 'tres'
+        quatro.innerText = 'quatro'
+        cinto.innerText = 'cinto'
+        seis.innerText = 'seis'
+        sete.innerText = 'sete'
+        oito.innerText = 'oito'
+        nove.innerText = 'nove'
+        dez.innerText = 'dez'
+        criaUl.appendChild(um)
+        criaUl.appendChild(dois)
+        criaUl.appendChild(tres)
+        criaUl.appendChild(quatro)
+        criaUl.appendChild(cinto)
+        criaUl.appendChild(seis)
+        criaUl.appendChild(sete)
+        criaUl.appendChild(oito)
+        criaUl.appendChild(nove)
+        criaUl.appendChild(dez)
+        right_content.appendChild(criaUl)
+        let h3_1 = document.createElement('h3')
+        let h3_2 = document.createElement('h3')
+        let h3_3 = document.createElement('h3')
+        main.appendChild(h3_1)
+        main.appendChild(h3_2)
+        main.appendChild(h3_3)
+        tagH1.className = "title"
+        h3_1.className = "description"
+        h3_2.className = "description"
+        h3_3.className = "description"
+        main.removeChild(left_content)
+        let centro = document.getElementsByClassName('right-content')[0]
+        centro.style.marginRight = 'auto'
+        let verde = document.getElementsByClassName('center-content')[0]
+        verde.parentNode.style.backgroundColor = "green"
+        criaUl.removeChild(nove)
+        criaUl.removeChild(dez)
+        
+        
       }
 
     </script>
