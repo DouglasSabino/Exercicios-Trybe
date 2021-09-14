@@ -120,4 +120,19 @@ window.onload = function(){
   }
 
   mouseOut()
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+  function adicionarTarefa() {
+    let botao = document.getElementById('btn-add')
+    botao.addEventListener('click',function(event){
+      let input = document.getElementById('task-input')
+      let criaTarefa = document.createElement('span')
+      criaTarefa.innerHTML = input.value + '<br>'
+      let minhasTarefas = document.getElementsByClassName('my-tasks')[0]
+      minhasTarefas.appendChild(criaTarefa)
+      input.value = ''
+    })
+  }
+
+  adicionarTarefa();
 }
