@@ -48,6 +48,16 @@ window.onload = function(){
 
   implementaBotao();
 
+  function implementaBotaoCor() {
+    let buttonCor = document.createElement('button')
+    buttonCor.id = 'btn-color'
+    buttonCor.innerText = 'Adiciona Cor'
+    let divPai = document.getElementsByTagName('div')[2]
+    divPai.appendChild(buttonCor)
+    }
+
+  implementaBotaoCor()  
+
   function clickFeriado() {
     let dias = document.getElementsByClassName('holiday')
     for(let i = 0; i < dias.length; i++) {
@@ -135,4 +145,28 @@ window.onload = function(){
   }
 
   adicionarTarefa();
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+  function adiconaDiv(cor) {
+    let minhasTarefas = document.getElementsByClassName('my-tasks')[0]
+    let criaDiv = document.createElement('div')
+    criaDiv.style.display = 'block'
+    criaDiv.style.margin = 'auto'
+    criaDiv.className = 'task'
+    criaDiv.style.height = '50px'
+    criaDiv.style.width = '50px'
+    criaDiv.style.backgroundColor = cor
+    minhasTarefas.appendChild(criaDiv)
+  }
+
+  function acaoCor() {
+    let botaoC = document.getElementById('btn-color')
+    let input = document.getElementById('task-input')
+    botaoC.addEventListener('click', function() {
+    adiconaDiv(input.value)
+    input.value = ''  
+    })
+  }
+
+  acaoCor();
+
 }
