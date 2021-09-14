@@ -47,6 +47,22 @@ function createDaysOfTheWeek() {
   }
 
   implementaBotao();
-  
+//--------------------------------------------------------------------------------------------------------------------------------------------------------//
+  function clickFeriado() {
+    let dias = document.getElementsByClassName('holiday')
+    for(let i = 0; i < dias.length; i++) {
+      if(dias[i].style.backgroundColor == 'green') {
+        dias[i].style.backgroundColor = 'unset'
+      }else{
+        dias[i].style.backgroundColor = 'green'
+      }
+    }
+  } 
 
+  function acaoFeriado() {
+    let button = document.getElementById('btn-holiday')
+    button.addEventListener('click',clickFeriado)
   }
+
+  acaoFeriado()
+}
