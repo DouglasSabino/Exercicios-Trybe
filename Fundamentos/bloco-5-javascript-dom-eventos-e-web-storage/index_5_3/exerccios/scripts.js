@@ -65,4 +65,14 @@ function createDaysOfTheWeek() {
   }
 
   acaoFeriado()
+//--------------------------------------------------------------------------------------------------------------------------------------------------------//  
+  function implementaSexta() {
+    let button = document.createElement('button')
+    button.id = 'btn-friday'
+    button.innerText = 'Sexta-Feira'
+    let divPai = document.getElementsByTagName('div')[2]
+    divPai.appendChild(button)
+  }
+
+  implementaSexta();
 }
