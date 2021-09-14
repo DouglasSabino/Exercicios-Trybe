@@ -14,7 +14,7 @@ function createDaysOfTheWeek() {
   createDaysOfTheWeek();
   
   // Escreva seu código abaixo.
-  window.onload = function(){ 
+window.onload = function(){ 
     const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
     let ul = document.getElementById('days')
 // --------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -47,7 +47,7 @@ function createDaysOfTheWeek() {
   }
 
   implementaBotao();
-//--------------------------------------------------------------------------------------------------------------------------------------------------------//
+
   function clickFeriado() {
     let dias = document.getElementsByClassName('holiday')
     for(let i = 0; i < dias.length; i++) {
@@ -74,5 +74,27 @@ function createDaysOfTheWeek() {
     divPai.appendChild(button)
   }
 
-  implementaSexta();
+  function acaoSexta() {
+    let button = document.getElementById('btn-friday')
+    button.addEventListener('click',clickSexta)
+  }
+
+  function clickSexta() {
+    let dias = document.getElementsByClassName('friday')
+    for(let i = 0; i < dias.length; i++) {
+      let aux = ['4','11','18','25']
+      if(dias[i].innerText != '*') {
+        dias[i].innerText = '*'
+      }else{ 
+
+        for(let x = 0; x < dias.length; x++) {
+         dias[i].innerText = aux[i]  
+          }
+        }
+
+        
+      }
+    } 
+    implementaSexta();  
+    acaoSexta();
 }
