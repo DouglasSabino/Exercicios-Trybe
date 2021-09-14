@@ -88,7 +88,7 @@ window.onload = function(){
       }else{ 
 
         for(let x = 0; x < dias.length; x++) {
-         dias[i].innerText = aux[i]  
+         dias[i].innerText = aux[i]
           }
         }
 
@@ -97,4 +97,27 @@ window.onload = function(){
     } 
     implementaSexta();  
     acaoSexta();
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+  function mouseOver(){
+  let li = document.getElementsByClassName('day')
+   for(let i = 0; i < li.length; i++) {
+     li[i].addEventListener('mouseover', function(event) {
+       event.target.style.fontSize = '48px'
+      })
+   }
+  }
+
+  mouseOver()
+
+  function mouseOut() {
+  let li = document.getElementsByClassName('day')
+   for(let i = 0; i < li.length; i++) {
+     li[i].addEventListener('mouseout', function(event) {
+       event.target.style.fontSize = '20px'
+      })
+   }
+
+  }
+
+  mouseOut()
 }
