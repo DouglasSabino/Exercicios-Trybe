@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    font-size: 48px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+p{
+    display: flex;
+    width: 300px;
+    margin: auto;
+}
+
+main {
+    display: flex;
+}
+
+.options-conteiner {
+    padding-top: 50px;
+    width: max-content;
+    margin: auto;
+}
+
+.buttons {
+    padding-top: 50px;
+    width: max-content;
+    margin: auto;
+    justify-self: center;
+}
