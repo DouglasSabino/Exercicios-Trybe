@@ -34,10 +34,20 @@ const getString = (word) => {
       } 
     }
     word = determinedString.join('')
-    console.log(word);
+    return word
 }
 
 let word = 'boleto'
-getString(word)
+console.log(getString(word))
+let retorno = getString(word)
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let mySkills = ['JavaScript','HTML','CSS','C#','Java']
+
+const concat = (retorno) => {
+    mySkills = mySkills.join(' ')
+    return `${retorno} minhas melhores skills são: ${mySkills}`
+}
+
+console.log(concat(retorno));
