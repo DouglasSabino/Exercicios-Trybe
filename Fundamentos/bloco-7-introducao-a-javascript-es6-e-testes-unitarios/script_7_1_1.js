@@ -18,7 +18,7 @@ testingScope(true)
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-for (let x = 0; x < oddsAndEvens.length; x++){
+for (let x = 1; x < oddsAndEvens.length; x++){
     for (let i = 0; i < oddsAndEvens.length; i++) {
         if(oddsAndEvens[i] > oddsAndEvens[i+1]) {
           let aux = oddsAndEvens[i+1]
