@@ -25,3 +25,19 @@ biggerWord(phrase)
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+const getString = (word) => {
+    let determinedString = 'trybe x aqui'
+    determinedString = determinedString.split('')
+    for(let i = 0; i < determinedString.length; i++) {
+      if(determinedString[i] === 'x' || determinedString[i] === 'X') {
+         determinedString[i] = word
+      } 
+    }
+    word = determinedString.join('')
+    console.log(word);
+}
+
+let word = 'boleto'
+getString(word)
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
