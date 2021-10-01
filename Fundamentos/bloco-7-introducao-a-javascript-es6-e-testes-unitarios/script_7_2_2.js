@@ -66,3 +66,25 @@ const lesson1 = {
 
    const totalEstudantes = allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes 
    console.log(`a soma de todos os alunos é: ${totalEstudantes}`);
+   
+   //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   const getValueByNumber = (object,posicao) => {
+      const values = Object.values(object)
+      console.log(values[posicao]);
+     }
+
+    getValueByNumber(lesson1,1) 
+
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    const checkValues = (object,key,value) => {
+      const entries = Object.entries(object)
+      let isEqual = false
+      for(let index in entries){
+        if (entries[index][0] == key && entries[index][1] ==  value) isEqual = true
+      }
+      console.log(isEqual)  
+    }
+
+    checkValues(lesson1,'turno','manhã')
