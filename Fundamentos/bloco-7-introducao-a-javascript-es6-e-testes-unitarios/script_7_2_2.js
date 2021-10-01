@@ -55,3 +55,14 @@ const lesson1 = {
    }
 
    listObjectValues(lesson3)
+
+   //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   const allLessons = Object.assign({},{lesson1,lesson2,lesson3}) 
+
+   console.log(allLessons);
+
+   //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   const totalEstudantes = allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes 
+   console.log(`a soma de todos os alunos é: ${totalEstudantes}`);
