@@ -1,0 +1,14 @@
+{
+  "name": "7_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "devDependencies": {
+    "jest": "^27.2.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
