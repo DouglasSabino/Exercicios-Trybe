@@ -1,4 +1,5 @@
 //Exercicio 2
+
 const checkNumber = (myNumber, number) => number === myNumber
 
 const loterryNumber = (myNumber, callback) => {
