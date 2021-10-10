@@ -60,9 +60,13 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  function authorBornIn1947() {
-    return books.find((book) => book.author.birthYear === 1947).author.name
+
+  function getNamedBook() {
+    const resultOfFind = books.find((book) => {
+        return book.name.length === 26
+    }); 
+
+    return resultOfFind
   }
 
-console.log(authorBornIn1947());
+  console.log(getNamedBook());
