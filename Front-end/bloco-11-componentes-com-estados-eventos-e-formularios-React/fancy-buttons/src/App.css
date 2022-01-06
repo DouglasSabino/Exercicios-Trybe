@@ -1,0 +1,5 @@
+button {
+  display: flexbox;
+  margin: 20px 100px;
+  padding: 20px;
+}
