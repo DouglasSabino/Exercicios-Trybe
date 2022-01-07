@@ -6,7 +6,6 @@ body {
   background-image: url('https://get.wallhere.com/photo/video-games-Lineage-II-darkness-screenshot-computer-wallpaper-191636.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100% 100% 100%;
-  background-position: center;
 }
 
 .form-section {
@@ -34,5 +33,6 @@ body {
 }
 
 .div-inputs-check {
+  color: white;
   margin-bottom: 15px;
 }

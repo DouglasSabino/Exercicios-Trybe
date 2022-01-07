@@ -13,40 +13,24 @@ class App extends React.Component {
       keepconected: false,
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChangeUser = this.handleChangeUser.bind(this);
-    this.handleChangePassword = this.handleChangePassword.bind(this);
-    this.handleChangeCheckBox = this.handleChangeCheckBox.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  // Handle Submit
-  handleSubmit(event) {
-    event.target.preventDefault();
-  }
+  // Handle Changes
 
-  handleChangeUser(event) {
+  handleChange({ target }) {
+    const { name, type } = target
+    const value = type === 'checkbox' ? target.checked : target.value
     this.setState({
-      user: event.target.value
+      [name]: value
     })
   }
-
-  handleChangePassword(event) {
-    this.setState({
-      password: event.target.value
-    })
-  }
-
-  handleChangeCheckBox(event) {
-    const resp = event.target.checked
-    this.setState({
-      remember: resp
-    })
-  }
+  
 
 
   render() {
 
-    const { user, password, remember } = this.state;
+    const { user, password, remember, keepconected } = this.state;
 
     return (
       <section className='form-section'>
@@ -57,8 +41,9 @@ class App extends React.Component {
 
             <label>
               <input
+                name='user'
                 value={user}
-                onChange={this.handleChangeUser}
+                onChange={this.handleChange}
                 id='input-username'
                 type='text'
                 placeholder='Username: '
@@ -67,8 +52,9 @@ class App extends React.Component {
 
             <label>
               <input
+                name='password'
                 value={password}
-                onChange={this.handleChangePassword}
+                onChange={this.handleChange}
                 id='input-password'
                 type='password'
                 placeholder='Password: '
@@ -81,8 +67,9 @@ class App extends React.Component {
 
             <label>
               <input
+                name='remember'
                 value={remember}
-                onChange={this.handleChangeCheckBox}
+                onChange={this.handleChange}
                 type='checkbox'
               />
               {`Lembrar Usuario `}
