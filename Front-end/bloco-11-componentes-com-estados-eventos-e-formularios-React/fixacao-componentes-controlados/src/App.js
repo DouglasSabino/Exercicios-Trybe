@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       user: '',
       password: '',
-      remember: 0,
+      remember: '',
       keepconected: false,
     }
 
@@ -37,17 +37,10 @@ class App extends React.Component {
   }
 
   handleChangeCheckBox(event) {
-    const resp = event.target.value
-
-    if (resp === 0) {
-      this.setState({
-        remember: 1
-      })
-    } else {
-      this.setState({
-        remember: 0
-      })
-    }
+    const resp = event.target.checked
+    this.setState({
+      remember: resp
+    })
   }
 
 
